@@ -1,0 +1,24 @@
+<html >
+<head>
+    <title> Home </title>
+
+</head>
+
+<body>
+<h1> Student Details </h1>
+<ol>
+
+    <li>Student ID : {{ student.id }} </li>
+    <li>First Name : {{ student.Fname }} </li>
+    <li>Last Name  : {{ student.Lname }} </li>
+    <li>Score      : {{ student.Score }}</li>
+</ol>
+
+<ul>
+<li><a href="/"> Go back to Home </a> </li>
+<li><a href="/update/{{ student.id }}"> Update Details </a> </li>
+<li><a href="/delete/{{ student.id }}"> Delete Student </a> </li>
+</ul>
+</body>
+
+</html>

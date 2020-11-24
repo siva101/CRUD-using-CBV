@@ -1,0 +1,34 @@
+<html >
+<head>
+    <title> Home </title>
+
+</head>
+
+<body>
+<h1> Student List </h1>
+
+
+<table border="1px solid black">
+    <thead>
+        <th>Student ID </th>
+        <th>First Name </th>
+        <th>Last Name  </th>
+        <th>Scores </th>
+    </thead>
+    {% for i in student_list %}
+    {% load CusFilters %}
+    <tr>
+        <td>{{ i.id }}</td>
+        <td>{{ i.Fname | myappend:"Mr. " }}</td>
+        <td>{{ i.Lname | mylower}}</td>
+        <td>{{ i.Score | add:"2"}}</td>
+        <td> <a href ="/{{ i.id}}"}>View </td> </a>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="create/"> Add New Student </a>
+
+</body>
+
+</html>
